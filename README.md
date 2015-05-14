@@ -8,9 +8,7 @@
 > Unless they really don't work.  
 > Use what makes most sense.
 
-> ```less
-> font-size: 1rem; // 16px
-> ```
+>     font-size: 1rem; // 16px
 
 ## Structure
 
@@ -20,11 +18,9 @@
 > Then curly brace and new line.  
 > Solo closing brace.
 
-> ```less
-> .hooray {
-> 	text-align: center;
-> }
-> ```
+> 	.hooray {
+> 		text-align: center;
+> 	}
 
 * * *
 
@@ -32,14 +28,12 @@
 > Split multiple selectors.  
 > Alphabetical.
 
-> ```less
-> .george,
-> .john,
-> .paul,
-> .ringo {
-> 	text-align: center;
-> }
-> ```
+> 	.george,
+> 	.john,
+> 	.paul,
+> 	.ringo {
+> 		text-align: center;
+> 	}
 
 * * *
 
@@ -47,15 +41,13 @@
 > All mixins go after that.  
 > Then the properties.
 
-> ```less
-> .fancy-class {
-> 	&:extend(.super);
-> 	story(@bro: 1rem);> 
-
-> 	border: none;
-> 	text-align: center;
-> }
-> ```
+> 	.fancy-class {
+> 		&:extend(.super);
+> 		story(@bro: 1rem);
+> 	
+> 		border: none;
+> 		text-align: center;
+> 	}
 
 * * *
 
@@ -68,23 +60,21 @@
 > Prevents ridiculousness  
 > And over-nesting.  
 
-> ```less
-> .parent {
-> 	
-> 	.child { // .parent .child
+> 	.parent {
 > 		
-> 		&:hover { // .parent .child:hover
+> 		.child { // .parent .child
 > 			
-> 			> .woah { // .parent .child:hover > .woah
+> 			&:hover { // .parent .child:hover
 > 				
-> 				&:nth-of-type(2n + 1) { // .parent .child:hover > .woah:nth-of-type(2n + 1)
-> 					text-align: center;
+> 				> .woah { // .parent .child:hover > .woah
+> 					
+> 					&:nth-of-type(2n + 1) { // .parent .child:hover > .woah:nth-of-type(2n + 1)
+> 						text-align: center;
+> 					}
 > 				}
 > 			}
 > 		}
 > 	}
-> }
-> ```
 
 ## Selectors
 
@@ -94,10 +84,9 @@
 > Please use IDs sparingly.  
 > Stop, don't qualify.  
 
-> ```less
-> #bad {
-> 	// stuff
-> }
+> 	#bad {
+> 		// stuff
+> 	}
 
 ## Indentation
 
@@ -105,8 +94,6 @@
 > Only one tab per level.  
 > Retract closing brace.  
 
-> ```less
-> .nope {
-> 	text-align: center;
-> }
-> ```
+> 	.nope {
+> 		text-align: center;
+> 	}
