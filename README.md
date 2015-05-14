@@ -60,21 +60,21 @@
 > Prevents ridiculousness  
 > And over-nesting.  
 
-> 	.parent {
-> 		
-> 		.child { // .parent .child
+> 		.parent {
 > 			
-> 			&:hover { // .parent .child:hover
+> 			.child { // .parent .child
 > 				
-> 				> .woah { // .parent .child:hover > .woah
+> 				&:hover { // .parent .child:hover
 > 					
-> 					&:nth-of-type(2n + 1) { // .parent .child:hover > .woah:nth-of-type(2n + 1)
-> 						text-align: center;
+> 					> .woah { // .parent .child:hover > .woah
+> 						
+> 						&:nth-of-type(2n + 1) { // .parent .child:hover > .woah:nth-of-type(2n + 1)
+> 							text-align: center;
+> 						}
 > 					}
 > 				}
 > 			}
 > 		}
-> 	}
 
 ## Selectors
 
