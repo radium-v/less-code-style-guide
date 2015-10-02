@@ -12,7 +12,7 @@ font-size: 1rem; // 16px
 
 -
 
-## Structure
+### Structure
 
 Selector, then space.  
 Then curly brace and new line.  
