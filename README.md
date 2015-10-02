@@ -3,12 +3,14 @@
 ## Values and Variables
 
 Rems are the best  
-Unless they really don't work.  
+[Unless they really don't work.](http://fvsch.com/code/bugs/rem-mediaquery/)  
 Use what makes the most sense.  
 
 ```less
 font-size: 1rem; // 16px
 ```
+
+-
 
 ## Structure
 
@@ -18,10 +20,10 @@ Solo closing brace.
 
 ```less
 .hooray {
-	text-align: center;
 }
 ```
 
+-
 
 ### Indentation
 
@@ -36,6 +38,8 @@ Retract closing brace.
 ```
 
 -
+
+### Mulitple Selectors
 
 Commas with newlines  
 Split multiple selectors.  
@@ -52,6 +56,8 @@ Alphabetically.
 
 -
 
+### Properties
+
 Extends always first.  
 All mixins go after that.  
 Then the properties.
@@ -67,6 +73,8 @@ Then the properties.
 ```
 
 -
+
+### Nested Selectors
 
 Nested selectors  
 Have a comment afterwards.  
@@ -94,7 +102,9 @@ And over-nesting.
 }
 ```
 
-## Selectors
+-
+
+### Selectors
 
 Classes are the best.  
 Please use IDs sparingly.  
@@ -109,4 +119,31 @@ ul.be-sorry {
 	// over-qualified
 }
 
+```
+
+-
+
+### Media Queries
+
+Store queries as strings.  
+Declare variables.  
+CSS cascades.
+
+```less
+@tablet-up: ~"screen and (min-width: 768px)";
+```
+
+
+Media queries  
+Nested inside the module.  
+Mobile First, of course.
+
+```less
+.box {
+	width: 1rem;
+	
+	@media @tablet-up {
+		width: 2rem;
+	}
+}
 ```
